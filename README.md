@@ -1,2 +1,0 @@
-# mmyma
-my blog updates
