@@ -16,14 +16,14 @@
 
   /* Default (light) theme */
   --bg: #FCFAF2;
-  --accent-bg: #F5F7FF;
+  --accent-bg: #FCFAF2;
   --text: #005CAF;
   --text-light: #005CAF;
   --border: #FCFAF2;
   --accent: #005CAF;
   --accent-light: #005CAF;
   --code: #005CAF;
-  --preformatted: #444;
+  --preformatted: #005CAF;
   --marked: #FFDD33;
   --disabled: #EFEFEF;
 }
