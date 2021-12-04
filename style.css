@@ -22,10 +22,10 @@
   --border: #FCFAF2;
   --accent: #005CAF;
   --accent-light: #005CAF;
-  --code: #005CAF;
-  --preformatted: #005CAF;
-  --marked: #FFDD33;
-  --disabled: #EFEFEF;
+  --code: #0c0c0c;
+  --preformatted: #0c0c0c;
+  --marked: #0c0c0c;
+  --disabled: #0c0c0c;
 }
 
 /* Dark theme */
@@ -36,11 +36,11 @@
     --text: #00ff00;
     --text-light: #00ff00;
     --border: #0C0C0C;
-    --accent: #969696;
-    --accent-light: #FFECB3;
-    --code: #969696;
-    --preformatted: #CCC;
-    --disabled: #111;
+    --accent: #FCFAF2;
+    --accent-light: #FCFAF2;
+    --code: #FCFAF2;
+    --preformatted: #FCFAF2;
+    --disabled: #0C0C0C;
   }
 
   img, video {
@@ -98,32 +98,66 @@ h1, h2, h3 {
   line-height: 1.1;
 }
 
-/* Format navigation */
-nav {
-  font-size: 1rem;
-  line-height:2;
-  padding: 1rem 0;
-  margin:inherit;
-}
-
-nav a {
-  margin: 1rem 1rem 0 0;
-  border: 1px solid var(--border);
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .1rem;
+  color: var(--text);
+ }
+ .nav-links a {
+  color: var(--accent);
+ }
+ /* LOGO */
+ .logo {
+  font-size: 32px;
+  color: var(--accent);
+ }
+ /* NAVBAR MENU */
+ .menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+ }
+ .menu li:hover {
+  background-color: var(--accent-bg);
   border-radius: 5px;
-  color: var(--text) !important;
-  display: inline-block;
-  padding: .1rem 1rem;
-  text-decoration: none;
-  transition: .4s;
-}
+  transition: 0.3s ease;
+ }
+ .menu li {
+  padding: 5px 14px;
+ }
+ /* DROPDOWN MENU */
+ .services {
+  position: relative;
+ }
 
-nav a:hover {
-  color: var(--accent) !important;
-  border-color: var(--accent);
-}
-
-nav a.current:hover {
-  text-decoration: none;
+ .dropdown {
+  background-color: var(--bg);
+  padding: 1em 0;
+  position:absolute; /*WITH RESPECT TO PARENT*/
+  display:none;
+  border-radius: 8px;
+  top: 35px;
+  margin:auto;
+ }
+ .dropdown li + li {
+  margin-top: 2px;
+ }
+ .dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+ }
+ .dropdown li:hover {
+  background-color: var(--accent-bg);
+ }
+ .services:hover .dropdown {
+  display:grid;
+ }
+ul,li{
+  list-style: none;
 }
 
 footer {
